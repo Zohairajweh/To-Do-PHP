@@ -10,13 +10,13 @@
    
       array_push( $_SESSION['ToDo'], $_POST['AddToDo'] );
     }
-   
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AddToDo</title>
+  <title>  </title>
 </head>
 <body>
   <h1> AddToDo List </h1>
@@ -40,6 +40,16 @@
       <?php } ?>
     </ul>
       <?php } ?>
+      <h2> Debugging</h2>
+      Click to exand:
+      <pre>
+    <strong> Session:</strong>
+    <?php var_dump( $_SESSION ); ?>
+  </pre>
+      <pre>
+    <strong>POST</strong>
+    <?php var_dump( $_POST ); ?>
+  </pre>
   
 
 </body>

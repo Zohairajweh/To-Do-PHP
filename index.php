@@ -42,6 +42,8 @@ $message="Add To Do List";
     <ul>
       <?php foreach ( $_SESSION['ToDo'] as $AddToDo ) { ?>
         <li>
+        <input type="checkbox">
+
           <?php echo $AddToDo; ?>
         </li>
       <?php } ?>

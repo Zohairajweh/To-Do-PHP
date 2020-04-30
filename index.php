@@ -16,16 +16,16 @@
    
       array_push( $_SESSION['ToDo'], $_POST['AddToDo'] );
     }
-
+$message="Add To Do List";
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  </title>
+  <title> <?php echo $message ?> </title>
 </head>
 <body>
-  <h1> AddToDo List </h1>
+  <h1> <?php echo $message ?> </h1>
   
   <form action="./index.php" method="POST">
 
@@ -47,6 +47,7 @@
       <?php } ?>
     </ul>
       <?php } ?>
+
       <h2> Debugging</h2>
       Click to exand:
       <pre>

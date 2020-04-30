@@ -1,5 +1,11 @@
 <?php
   session_start(); 
+  if ( isset( $_POST['reset'] ) )
+  {
+    session_unset();
+    session_destroy();
+    session_start();
+  }
   if ( !isset( $_SESSION['ToDo'] ) )
   { 
     $_SESSION['ToDo'] = array();
@@ -29,6 +35,7 @@
       <input type="text" name="AddToDo" id="AddToDo">
     </label>
     <input type="submit" value="AddToDo">
+    <input type="submit" name="reset" value="Reset">
   </form>
   <?php if ( !empty( $_SESSION['ToDo'] ) ) {  ?>
     <h2>Your Taks:</h2>
